@@ -9,12 +9,6 @@ Buzzer systems only dial a single number, and this sucks when you have roommates
 
 This project allows you to set up an phone tree to direct the buzzer to a specific person the visitor selects. It also allows you to specify secret codes for automatic entry.
 
-## Caveats
-
-This system assumes that your buzzer accepts entrance by dialing the number 9.
-
-If you require a different code to be dialed, change the media file which is loaded [here](https://github.com/jeffandersen/doorman/blob/master/lib/controllers/dial.js#L17).
-
 ## Twilio
 
 You need an active Twilio account and phone number to use this module.
@@ -41,4 +35,10 @@ Have the buzzer fall back to a specific user's number:
 
 ```
 DOORMAN_DEFAULT=Jeff@345-678-9012
+```
+
+Your buzzer uses 0 to accept someone instead of 9:
+
+```
+DOORMAN_ACCEPT_DIGIT=0
 ```

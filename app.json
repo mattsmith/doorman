@@ -13,6 +13,11 @@
       "description": "Comma-delimited list of name@000-000-0000",
       "required": true
     },
+    "DOORMAN_ACCEPT_DIGIT": {
+      "description": "Number to press to accept visitor into the building",
+      "required": true,
+      "value": 9
+    },
     "DOORMAN_GREETING": {
       "description": "Opening line when buzzer is answered",
       "value": "Thank you for calling, please select one of the following options",
