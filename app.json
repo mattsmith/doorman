@@ -1,0 +1,27 @@
+{
+  "name": "doorman",
+  "description": "Allow multiple people to manage a single buzzer using Twilio",
+  "repository": "https://github.com/jeffandersen/doorman",
+  "keywords": "doorbell buzzer doorman twilio",
+  "env": {
+    "DOORMAN_USERS": {
+      "description": "Contacts in a comma-delimited list of name@000-000-0000",
+      "required": true
+    },
+    "DOORMAN_GREETING": {
+      "description": "Opening line when buzzer is answered",
+      "value": "Thank you for calling, please select one of the following options",
+      "required": true
+    },
+    "DOORMAN_DOMAIN": {
+      "description": "The web-accessible endpoint for your app",
+      "required": true
+    },
+    "DOORMAN_SECRETS": {
+      "description": "Comma-delimited codes for secret access"
+    },
+    "DOORMAN_DEFAULT": {
+      "decription": "Single contact from DOORMAN_USERS in form of name@000-000-0000"
+    }
+  }
+}

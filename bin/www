@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+'use strict';
+
+var App = require('../lib/app').App;
+
+if (require.main === module) {
+  main();
+}
+
+function main() {
+  if (!process.env.DOORMAN_DOMAIN) {
+    throw new Error('Missing env variable DOMAIN');
+  }
+  if (!process.env.DOORMAN_USERS) {
+    throw new Error('Missing env variable DOORMAN_USERS');
+  }
+  if (!process.env.DOORMAN_USERS.split(',').length) {
+    throw new Error('DOORMAN_USERS requires at least one user');
+  }
+  var app = new App();
+  app.configure().then(function() {
+    return app.listen();
+  }).then(function() {
+    console.log(`Listening on port ${app.port}`);
+  }).catch(function(err) {
+    console.error('Failed to start app', err);
+    throw err;
+  });
+}

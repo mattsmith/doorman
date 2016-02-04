@@ -1,0 +1,23 @@
+{
+  "name": "doorman",
+  "version": "1.0.0",
+  "description": "Twilio integration for answering buzzer systems.",
+  "scripts": {
+    "start": "./bin/www"
+  },
+  "keywords": [
+    "buzzer",
+    "slack",
+    "door",
+    "doorman",
+    "doorbell"
+  ],
+  "author": "Jeff Andersen <@jeffandersen>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.14.2",
+    "express": "4.13.4",
+    "lodash": "4.2.1",
+    "twilio": "3.3.0-edge"
+  }
+}
